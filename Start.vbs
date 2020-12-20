@@ -1,6 +1,7 @@
-prgLoc = "C:\Progra~1\aria2\aria2c.exe"
-confLoc = "C:\Users\dingp\Documents\aria2\aria2.conf"
-logLoc = "C:\Users\dingp\Documents\aria2\aria2.log"
+homeLoc = "C:\Users\dingp"
+prgLoc = "aria2c"
+confLoc = Replace("{0}\Documents\aria2\aria2.conf", "{0}", homeLoc)
+logLoc = Replace("{0}\Documents\aria2\aria2.log", "{0}", homeLoc)
 command = prgLoc & " --conf-path=" & confLoc
 ' check if the log file exceeds 10MB, if so clean it.
 Set oFSO = CreateObject("Scripting.FileSystemObject")
